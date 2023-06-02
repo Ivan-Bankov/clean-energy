@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/wind-energy.ico') }}">
+    <title>Home | Clean Energy</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+
+    <!-- MOBILE NAV -->
+
+    <nav id="mobile-nav">
+        <a href="{{ url_for('index')}}">
+            <img src="{{ url_for('static', filename='images/wind-energy-green.png') }}" alt="Clean Energy Logo">
+            <h1>Clean Energy</h1>
+        </a>
+        <ul>
+            <li><a href="{{ url_for('index')}}">Home</a></li>
+            <li><a href="{{ url_for('about')}}">About</a></li>
+            <li><a href="{{ url_for('services')}}" id="mobile-active">Services</a></li>
+            <li><a href="{{ url_for('contacts')}}">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <!-- TOP NAV -->
+
+        <nav id="top-nav">
+            <a href="{{ url_for('index')}}">
+                <img src="{{ url_for('static', filename='images/wind-energy-green.png') }}" alt="Clean Energy Logo">
+                <h1>Clean Energy</h1>
+            </a>
+            <input type="checkbox" id="mobile-nav-btn" hidden>
+            <label onclick="displayNav()" for="mobile-nav-btn"><i class="gg-menu"></i></label>
+            <ul>
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{ url_for('about')}}">About</a></li>
+                <li><a href="{{ url_for('services')}}" id="top-active">Services</a></li>
+                <li><a href="{{ url_for('contacts')}}">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO SECTION -->
+
+        <section id="secondary-hero-section">
+            <div class="hero-img">
+                <img src="{{ url_for('static', filename='images/shawn-bagley-CFbgCynTkEA-unsplash.jpg') }}" alt="Wind turnines on a hill.">
+            </div>
+            <div class="hero-title">
+                <h2>Our&nbsp;<br class="small-screen-break">services.</h2>
+            </div>
+            <div class="hero-description">
+                <p><span class="logo-font">Clean Energy</span> offers many different ways of turning your electricity bills greener! We work with individual people who want to make their homes a little more environmentally-friendly but also with big companies who want to curb their carbon emissions and contribute to the halting of Climate Change. We work with smaller to medium organizations as well, aiding them in getting cheaper electricity so they can afford to keep businesses operational. Our solutions vary from contract to contract so if you want to learn more, this is where you need to be!
+                </p>
+            </div>
+        </section>
+    </header>
+
+    <!-- SERVICES SECTION -->
+
+    <section class="body-section" id="services-section">
+        <article>
+            <div class="service-title">
+                <h2 class="section-title">Geothermal Power</h2>
+            </div>
+            <div class="service-img">
+                <img src="{{ url_for('static', filename='images/power-plant-g92d5e5d8d_1920.jpg') }}" alt="A geothermal plant." class="float-left">
+            </div>
+            <div class="service-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <button type="button" class="CTA CTA-margin"><a href="{{ url_for('contacts')}}">Call Us Now&nbsp;<i class="gg-arrow-right"></i></a></button>
+        </article>
+        <article>
+            <div class="service-title">
+                <h2 class="section-title">Solar Power</h2>
+            </div>
+            <div class="service-img">
+                <img src="{{ url_for('static', filename='images/architecture-gb909e8923_1920.jpg') }}" alt="House with solar panels on the roof." class="float-right">
+            </div>
+            <div class="service-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <button type="button" class="CTA CTA-margin"><a href="{{ url_for('contacts')}}">Call Us Now&nbsp;<i class="gg-arrow-right"></i></a></button>
+        </article>
+        <article>
+            <div class="service-title">
+                <h2 class="section-title">Wind Power</h2>
+            </div>
+            <div class="service-img">
+                <img src="{{ url_for('static', filename='images/pexels-pixabay-414837.jpg') }}" alt="A wind turbine in a field." class="float-left">
+            </div>
+            <div class="service-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <button type="button" class="CTA CTA-margin"><a href="{{ url_for('contacts')}}">Call Us Now&nbsp;<i class="gg-arrow-right"></i></a></button>
+        </article>
+    </section>
+
+    <!-- FOOTER -->
+
+    <div id="footer-bg">
+        <footer>
+            <article>
+                <div>
+                    <img src="{{ url_for('static', filename='images/wind-energy-white.png') }}" alt="Clean Energy Logo" id="footer-logo">
+                <h6>CE</h6>
+                </div>
+                <h2>Start by making the switch to clean energy now!</h2>
+            </article>
+            <article class="large-screen-article">
+                <h4>Links:</h4>
+                <a href="{{ url_for('index')}}">Home</a>
+                <a href="{{ url_for('about')}}">About</a>
+                <a href="{{ url_for('services')}}">Services</a>
+                <a href="{{ url_for('contacts')}}">Contacts</a>
+            </article>
+            <article class="large-screen-article">
+                <h4>Services:</h4>
+                <a href="{{ url_for('services')}}">Wind</a>
+                <a href="{{ url_for('services')}}">Solar</a>
+                <a href="{{ url_for('services')}}">Geothermal</a>
+            </article>
+            <div id="small-screen-wrapper">
+                <article>
+                    <h4>Links:</h4>
+                    <a href="{{ url_for('index')}}">Home</a>
+                    <a href="{{ url_for('about')}}">About</a>
+                    <a href="{{ url_for('services')}}">Services</a>
+                    <a href="{{ url_for('contacts')}}">Contacts</a>
+                </article>
+                <article>
+                    <h4>Services:</h4>
+                    <a href="{{ url_for('services')}}">Wind</a>
+                    <a href="{{ url_for('services')}}">Solar</a>
+                    <a href="{{ url_for('services')}}">Geothermal</a>
+                </article>
+            </div>
+            <article>
+                <h4>Contacts:</h4>
+                <p><i class="gg-phone"></i>&nbsp;+354 551 8749</p>
+                <p><i class="gg-mail"></i>&nbsp;support@clean.energy</p>
+            </article>
+        </footer>
+    </div>
+</body>
+</body>
+</html>

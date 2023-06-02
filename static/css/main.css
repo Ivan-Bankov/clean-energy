@@ -1,0 +1,765 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+
+body {
+    color: #4C4B16;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 85%;
+    margin: auto;
+}
+
+.body-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 65%;
+    height: fit-content;
+    margin: 4rem auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* END OF GENERAL STYLES */
+
+/* STYLING THE NAVS */
+
+/* STYLING THE MOBILE NAV */
+
+#mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: #f8f8f8;
+    font-size: 1.2rem;
+    transition: transform 1s;
+    z-index: 2;
+}
+
+#mobile-nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 1rem;
+    color: #4C4B16;
+}
+
+#mobile-nav a h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+}
+
+#mobile-nav a:focus{
+    background-color: #d0d0d0;
+}
+
+#mobile-active{
+    background-color: #d0d0d0;
+}
+
+#mobile-nav ul {
+    list-style: none;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+#top-nav label {
+    display: none;
+}
+
+/* END OF STYLING THE MOBILE NAV */
+
+/* STYLING THE TOP NAV */
+
+#top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+#top-nav a{
+    display: flex;
+    text-decoration: none;
+}
+
+#top-nav a:hover {
+    font-weight: bold;
+}
+
+#top-active {
+    font-weight: bold;
+}
+
+#top-nav a img, #footer-logo, #mobile-nav a img {
+    width: auto;
+    height: 3rem;
+}
+
+#top-nav a h1 {
+    color: #4C4B16;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+}
+
+#top-nav ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+#top-nav ul li {
+    list-style: none;
+}
+
+#top-nav ul li a {
+    color: #4C4B16;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* END OF STYING THE TOP NAV */
+
+/* END OF STYLING THE NAVS */
+
+/* START OF STYLING THE HOME PAGE */
+
+/* STYLING THE HERO SECTION */
+
+#hero-section {
+    display: flex;
+    align-items: center;
+}
+
+#hero-section article, aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    height: auto;
+    margin: 0 2rem;
+}
+
+#hero-section article h2 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+#hero-section h3, p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    font-weight: normal;
+}
+
+#hero-section aside p {
+    margin: 1rem;
+}
+
+/* STYLING THE CTA BUTTON */
+
+.CTA {
+    background-color: #E7B10A;
+    border: none;
+    margin: 1rem 0;
+    box-shadow: 4px 4px 4px rgba(76, 75, 22, 0.25);
+    transition: all 0.5s;
+}
+
+.CTA:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.CTA:focus {
+    border: 1px solid #000000;
+}
+
+.CTA a {
+    display: flex;
+    padding: 1rem;
+    font-size: 1.2rem;
+    width: fit-content;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* END OF STYLING THE CTA BUTTON */
+
+#hero-section article img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* END OF STYLING THE HERO SECTION */
+
+/* STYLING THE SERVICES SECTION */
+
+#services {
+    display: flex;
+    gap: 6rem;
+}
+
+#services article {
+    width: 33%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services article img {
+    height: 7rem;
+    margin-bottom: 1rem;
+}
+
+#services article p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* END OF STYLING THE SERVICES SECTION */
+
+/* STYLING THE ABOUT SECTION */
+
+#about-bg {
+    position: relative;
+    background: url(../images/pexels-pixabay-356036.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+#about-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(137, 129, 33, 0.3);
+}
+
+#about-section > * {
+    z-index: 1;
+}
+
+#about-section p {
+    margin: 1rem 0;
+}
+
+/* END OF STYLING THE ABOUT SECTION */
+
+/* STYLING THE CONTACTS SECTION */
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 2rem;
+    width: 100%;
+    height: fit-content;
+    border: 2px solid #898121;
+    box-shadow: 4px 4px 4px rgba(76, 75, 22, 0.25);
+    border-radius: 15px; 
+}
+
+form > * {
+    padding: 1rem 0;
+}
+
+form label {
+    font-size: 1.2rem;
+}
+
+form input, textarea {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 0.15rem solid #898121;
+}
+
+#send-btn {
+    margin-top: 2rem;
+    padding: 1rem;
+    width: fit-content;
+    border: none;
+    background-color: #898121;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(76, 75, 22, 0.25);
+    transition: all 0.5s;
+}
+
+#send-btn:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+#send-btn:focus {
+    border: 1px solid #000000;
+}
+
+/* END OF STYLING THE CONTACTS SECTION */
+
+/* STYLING THE FOOTER */
+
+#footer-bg {
+    background-color: #4C4B16;
+}
+
+footer {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+footer article {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+}
+
+footer h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+footer div {
+    display: flex;
+}
+
+footer h6 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+}
+
+footer article div, h4 {
+    margin: 1rem 0;
+}
+
+footer div h2 {
+    margin-top: 0;
+}
+
+footer article a, p {
+    margin: 0.5rem 0;
+}
+
+footer article a {
+    text-decoration: none;
+}
+
+footer article a:hover {
+    text-decoration: underline;
+}
+
+footer article p {
+    display: flex;
+    align-items: center;
+}
+
+footer, footer a {
+    color: #FFFFFF;
+}
+
+#small-screen-wrapper {
+    display: none;
+}
+
+/* END OF STYLING THE FOOTER */
+
+/* END OF STYING THE HOME PAGE */
+
+/* START OF STYLING THE ABOUT PAGE */
+
+/* STYLING THE HERO SECTION */
+
+.logo-font {
+    font-family: 'Indie Flower', cursive;
+}
+
+.horizontal-flip {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.hero-img img {
+    margin: 0 0 2rem 2rem;
+    width: 70%;
+    height: 20rem;
+    float: right;
+    object-fit: cover;
+}
+
+.hero-title {
+    width: 40%;
+}
+
+.hero-title h2 {
+    font-size: 3rem;
+    margin: 0 0 4rem 0;
+    padding: 6rem 0 0 0;
+    
+}
+
+.hero-description {
+    font-size: 1.2rem;
+}
+
+/* END OF STYLING THE HERO SECTION */
+
+/* STYLING THE TEAM SECTION */
+
+.team-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-row article {
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-row article h2 {
+    margin: 0.5rem 0;
+}
+
+.team-row article img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50px;
+}
+
+/* END OF STYLING THE TEAM SECTION  */
+
+/* STYLING THE LOCATIONS SECTION */
+
+#locations-section {
+    background-color: #f8f8f8;
+}
+
+#locations-section h2 {
+    margin-top: 2rem;
+}
+
+#locations-section img {
+    width: 100%;
+    object-fit: cover;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+/* END OF STYLING THE LOCATIONS SECTION */
+
+/* STYLING THE WORK SECTION */
+
+#work-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    margin-top: -2rem;
+}
+
+#work-section article {
+    width: 100%;
+    margin: 2rem 0;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.article-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.info-left {
+    padding-right: 2rem;
+}
+
+.info-right {
+    padding-left: 2rem;
+}
+
+.article-img {
+    width: 50%;
+}
+
+.article-img img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(76, 75, 22, 0.25);
+}
+
+.article-info p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.small-screen-img {
+    display: none;
+}
+
+/* END OF STYLING THE WORK SECTION */
+
+/* END OF STYLING THE ABOUT PAGE */
+
+/* START OF STYLING THE SERVICES PAGE */
+
+.float-left {
+    float: left;
+    margin: 0 2rem 2rem;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 2rem 2rem;
+}
+
+.service-info {
+    width: 50%;
+}
+
+.service-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-img img {
+    aspect-ratio: 1 / 1;
+    width: 50%;
+    height: fit-content;
+    object-fit: cover;
+    box-shadow: 4px 4px 4px rgba(76, 75, 22, 0.25);
+}
+
+.service-description {
+    font-size: 1.2rem;
+}
+
+.CTA-margin {
+    margin-bottom: 2rem;
+}
+
+/* END OF STYLING THE SERVICES PAGE */
+
+/* START OF STYLING THE CONTACTS PAGE */
+
+#contacts-section{
+    display: flex;
+    flex-direction: row;
+}
+
+#contact-info, #street-map {
+    width: 50%;
+}
+
+#contact-info {
+    margin-right: 1rem;
+}
+
+#contact-info i {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+#contact-info h2 {
+    margin-top: 1rem;
+}
+
+#street-map {
+    aspect-ratio: 1 / 1;
+    margin-left: 1rem;
+}
+
+#street-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1100px) {
+    #top-nav ul {
+        display: none;
+    }
+
+    #top-nav label {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    /* HOME PAGE */
+    aside {
+        display: none;
+    }
+
+    #hero-section article {
+        width: 50%;
+    }
+
+    /* SECONDARY HERO SECTION */
+    #secondary-hero-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #secondary-hero-section > * {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+
+    .hero-img img {
+        width: 100%;
+        aspect-ratio: auto;
+    }
+
+    .hero-title h2 {
+        padding: 0;
+    }
+
+    .small-screen-break {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* HOME PAGE */
+    #hero-image, #hero-image img, aside {
+        display: none;
+    }
+
+    #hero-section {
+        align-items: center;
+    }
+
+    #hero-section article {
+        width: 100%;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    #services {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #services article {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    footer article {
+        max-width: 100%;
+    }
+
+    .small-screen-img {
+        display: block;
+    }
+
+    .large-screen-article {
+        display: none;
+    }
+
+    #small-screen-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+
+    /* WORK SECTION */
+    #work-section article {
+        flex-direction: column-reverse;
+    }
+
+    #work-section article > * {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .large-screen-img {
+        display: none;
+    }
+
+    .info-left, .info-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .article-info {
+        padding-top: 2rem;
+    }
+
+
+    /* SERVICES PAGE */
+    .service-img img {
+        width: 100%;
+    }
+
+    #services-section article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .float-left {
+        float: none;
+    }
+
+    .float-right {
+        float: none;
+    }
+
+    /* CONTACTS PAGE */
+    #contacts-section {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    #contacts-section > * {
+        width: 100%;
+    }
+}

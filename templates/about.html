@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/wind-energy.ico') }}">
+    <title>Home | Clean Energy</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+
+    <!-- MOBILE NAV -->
+
+    <nav id="mobile-nav">
+        <a href="{{ url_for('index')}}">
+            <img src="{{ url_for('static', filename='images/wind-energy-green.png') }}" alt="Clean Energy Logo">
+            <h1>Clean Energy</h1>
+        </a>
+        <ul>
+            <li><a href="{{ url_for('index')}}">Home</a></li>
+            <li><a href="{{ url_for('about')}}" id="mobile-active">About</a></li>
+            <li><a href="{{ url_for('services')}}">Services</a></li>
+            <li><a href="{{ url_for('contacts')}}">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <!-- TOP NAV -->
+
+        <nav id="top-nav">
+            <a href="{{ url_for('index')}}">
+                <img src="{{ url_for('static', filename='images/wind-energy-green.png') }}" alt="Clean Energy Logo">
+                <h1>Clean Energy</h1>
+            </a>
+            <input type="checkbox" id="mobile-nav-btn" hidden>
+            <label onclick="displayNav()" for="mobile-nav-btn"><i class="gg-menu"></i></label>
+            <ul>
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{ url_for('about')}}" id="top-active">About</a></li>
+                <li><a href="{{ url_for('services')}}">Services</a></li>
+                <li><a href="{{ url_for('contacts')}}">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO SECTION -->
+
+        <section id="secondary-hero-section">
+            <div class="hero-img">
+                <img src="{{ url_for('static', filename='images/sungrow-emea-ceTSHQ0qars-unsplash.jpg') }}" alt="Solar panels." class="horizontal-flip">
+            </div>
+            <div class="hero-title">
+                <h2>About&nbsp;<br class="small-screen-break"><span class="logo-font">CleanEnergy</span>.</h2>
+            </div>
+            <div class="hero-description">
+                <p><span class="logo-font">Clean Energy</span> is an energy company based in Iceland with locations on three continents and continuing to grow. Our mission is to promote the use of renewable energy and show people that a future without fossil fuels is not only possible but also closer than we&apos;d like to think and the sooner we make the switch, the better it is for our and our planet&apos;s health. Our work also expands to aiding eco non-profit organizations in their mission to help save our planet&apos;s ecosystems as we donate 20% of our profits every month. 
+                </p>
+            </div>
+        </section>
+    </header>
+
+    <!-- TEAM SECTION -->
+
+    <section class="body-section">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-row">
+            <article>
+                <img src="{{ url_for('static', filename='images/woman-g469719599_1920.jpg') }}" alt="">
+                <h2>Angela Rosario</h2>
+                <p>CEO</p>
+            </article>
+            <article>
+                <img src="{{ url_for('static', filename='images/austin-wilcox-tWbn0j8c0ic-unsplash.jpg') }}" alt="">
+                <h2>Pamela Johnson</h2>
+                <p>Chief Financial Officer</p>
+            </article>
+            <article>
+                <img src="{{ url_for('static', filename='images/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg') }}" alt="">
+                <h2>Andrea Harrison</h2>
+                <p>Chief Information Officer</p>
+            </article>
+            <article>
+                <img src="{{ url_for('static', filename='images/bave-pictures-SJDWOw4FKeo-unsplash.jpg') }}" alt="">
+                <h2>Robert Smith</h2>
+                <p>Chief Marketing Officer</p>
+            </article>
+            <article>
+                <img src="{{ url_for('static', filename='images/pexels-arina-krasnikova-7752568.jpg') }}" alt="">
+                <h2>Kim Ji-yeong</h2>
+                <p>Chief Operations Officer</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+
+    <div id="locations-section">
+        <section class="body-section" >
+            <h2 class="section-title">Our Locations</h2>
+            <img src="{{ url_for('static', filename='images/map.png') }}" alt="A map showing North and South America to the left, and Europe to the right." >
+        </section>
+    </div>
+
+    <!-- WORK SECTION -->
+
+    <section class="body-section" id="work-section">
+        <h2 class="section-title">Our Work</h2>
+        <article>
+            <div class="article-info info-left">
+                <h2>Donating to non-profits</h2>
+                <p>We donate 20% of our profits each month to local organizations in Europe and Latin America who are doing the best they can to preserve the native habitats of their countries from human destruction but also Climate Change. These donations play a crucial part in  preserving the biodiversity of countries like Costa Rica, Argentina, Norway, Iceland, and Ireland our work wouldn't carry the same weight as it does now. </p>
+                <button type="button" class="CTA"><a href="{{ url_for('contacts')}}">Call Us Now&nbsp;<i class="gg-arrow-right"></i></a></button>
+            </div>
+            <div class="article-img info-right">
+                <img src="{{ url_for('static', filename='images/spencer-watson-vzVGHfxZIZ8-unsplash.jpg') }}" alt="A lush forest.">
+            </div>
+        </article>
+        <article>
+            <div class="article-img info-left large-screen-img">
+                <img src="{{ url_for('static', filename='images/pexels-kindel-media-9799994.jpg') }}" alt="A large building with solar panels.">
+            </div>
+            <div class="article-info info-right">
+                <h2>Changing minds</h2>
+                <p>We work not only to change individual people's minds but also the minds of whole companies. We've contacted numerous companies around the world and managed to turn them green! This is a very important step to take seeing as the everyday homes of regular people don't have as big of an impact on the climate as big corporations do.</p>
+                <button type="button" class="CTA"><a href="{{ url_for('contacts')}}">Call Us Now&nbsp;<i class="gg-arrow-right"></i></a></button>
+            </div>
+            <div class="article-img info-left small-screen-img">
+                <img src="{{ url_for('static', filename='images/pexels-kindel-media-9799994.jpg') }}" alt="A large building with solar panels.">
+            </div>
+        </article>
+    </section>
+
+    <!-- FOOTER -->
+
+    <div id="footer-bg">
+        <footer>
+            <article>
+                <div>
+                    <img src="{{ url_for('static', filename='images/wind-energy-white.png') }}" alt="Clean Energy Logo" id="footer-logo">
+                <h6>CE</h6>
+                </div>
+                <h2>Start by making the switch to clean energy now!</h2>
+            </article>
+            <article class="large-screen-article">
+                <h4>Links:</h4>
+                <a href="{{ url_for('index')}}">Home</a>
+                <a href="{{ url_for('about')}}">About</a>
+                <a href="{{ url_for('services')}}">Services</a>
+                <a href="{{ url_for('contacts')}}">Contacts</a>
+            </article>
+            <article class="large-screen-article">
+                <h4>Services:</h4>
+                <a href="{{ url_for('services')}}">Wind</a>
+                <a href="{{ url_for('services')}}">Solar</a>
+                <a href="{{ url_for('services')}}">Geothermal</a>
+            </article>
+            <div id="small-screen-wrapper">
+                <article>
+                    <h4>Links:</h4>
+                    <a href="{{ url_for('index')}}">Home</a>
+                    <a href="{{ url_for('about')}}">About</a>
+                    <a href="{{ url_for('services')}}">Services</a>
+                    <a href="{{ url_for('contacts')}}">Contacts</a>
+                </article>
+                <article>
+                    <h4>Services:</h4>
+                    <a href="{{ url_for('services')}}">Wind</a>
+                    <a href="{{ url_for('services')}}">Solar</a>
+                    <a href="{{ url_for('services')}}">Geothermal</a>
+                </article>
+            </div>
+            <article>
+                <h4>Contacts:</h4>
+                <p><i class="gg-phone"></i>&nbsp;+354 551 8749</p>
+                <p><i class="gg-mail"></i>&nbsp;support@clean.energy</p>
+            </article>
+        </footer>
+    </div>
+</body>
+</html>

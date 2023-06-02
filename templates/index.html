@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/wind-energy.ico') }}">
+    <title>Home | Clean Energy</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+
+    <!-- MOBILE NAV -->
+
+    <nav id="mobile-nav">
+        <a href="{{ url_for('index')}}">
+            <img src="{{ url_for('static', filename='images/wind-energy-green.png') }}" alt="Clean Energy Logo">
+            <h1>Clean Energy</h1>
+        </a>
+        <ul>
+            <li><a href="{{ url_for('index')}}" id="mobile-active">Home</a></li>
+            <li><a href="{{ url_for('about')}}">About</a></li>
+            <li><a href="{{ url_for('services')}}">Services</a></li>
+            <li><a href="{{ url_for('contacts')}}">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <!-- TOP NAV -->
+
+        <nav id="top-nav">
+            <a href="{{ url_for('index')}}">
+                <img src="{{ url_for('static', filename='images/wind-energy-green.png') }}" alt="Clean Energy Logo">
+                <h1>Clean Energy</h1>
+            </a>
+            <input type="checkbox" id="mobile-nav-btn" hidden>
+            <label onclick="displayNav()" for="mobile-nav-btn"><i class="gg-menu"></i></label>
+            <ul>
+                <li><a href="{{ url_for('index')}}" id="top-active">Home</a></li>
+                <li><a href="{{ url_for('about')}}">About</a></li>
+                <li><a href="{{ url_for('services')}}">Services</a></li>
+                <li><a href="{{ url_for('contacts')}}">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO SECTION -->
+
+        <section id="hero-section">
+            <article>
+                <h2>Want to help the environment?</h2>
+                <h3>Start by making the switch to clean energy.</h3>
+                <p>With Clean Energy as the middleman you can settle everything with just a few calls!</p>
+                <button type="button" class="CTA"><a href="{{ url_for('contacts')}}">Call Us Now&nbsp;<i class="gg-arrow-right"></i></a></button>
+            </article>
+            <article id="hero-image">
+                <img src="{{ url_for('static', filename='images/pexels-pixabay-414928.jpg')}}" alt="Wind turbine on a field.">
+            </article>
+            <aside>
+                <p>Did you know wind power&apos;s share of worldwide electricity usage at the end of 2018 was only 4.8%?</p>
+                <p>According to IRENA, renewables were the cheapest energy source in 2020. That&apos;s great news for us and the planet!</p>
+                <p>Geothermal energy covers a significant share of the electricity demand in countries like Iceland, El Salvador and Kenya!</p>
+            </aside>
+        </section>
+    </header>
+
+        <!-- SERVICES SECTION -->
+
+    <section class="body-section">
+        <h2 class="section-title">Services</h2>
+        <div id="services">
+            <article>
+                <img src="{{ url_for('static', filename='images/wind-turbine-green.png') }}" alt="Solar panel icon.">
+                <h2>Wind</h2>
+                <p>Want to make the switch to wind power? Take the first step by clicking on the button below to see our solutions!</p>
+            </article>
+            <article id="solar-service">
+                <img src="{{ url_for('static', filename='images/solar-panel-green.png') }}" alt="Wind turbine icon.">
+                <h2>Solar</h2>
+                <p>Solar is the perfect option for smaller homes and large-scale operations. Check out our offers by clicking the button below!</p>
+            </article>
+            <article>
+                <img src="{{ url_for('static', filename='images/geothermal-energy-green.png') }}" alt="Geothermal station icon.">
+                <h2>Geothermal</h2>
+                <p>Living somewhere cold without much wind or sunlight? Click the button below and see our options for geothermal!</p>
+            </article>
+        </div>
+            
+        <button type="button" class="CTA"><a href="{{ url_for('services')}}">Read More&nbsp;<i class="gg-arrow-right"></i></a></button>
+    </section>
+
+    <!-- ABOUT SECTION -->
+
+    <div id="about-bg">
+        <section class="body-section" id="about-section">
+            <h2 class="section-title">About</h2>
+            <p>We are an energy company focused on making&apos;s lives a little less expensive and more eco-conscious by providing them with the information and resources needed for them to make the switch from electricity based on fossil fuels to one based on renewable energy sources like wind, solar, and geothermal. You can learn more about our work, locations, team and how we operate by clicking the button below.</p>
+            <button type="button" class="CTA"><a href="{{ url_for('about')}}">Read More&nbsp;<i class="gg-arrow-right"></i></a></button>
+        </section>
+    </div>
+
+    <!-- CONTACTS SECTION -->
+
+    <section class="body-section">
+        <h2 class="section-title">Contact Us</h2>
+        <form action="/form" method="POST" id="home-form">
+            <label for="name">Name:</label>
+            <input required type="text" name="name" placeholder="Type Here">
+            <label for="email">Email:</label>
+            <input required type="email" name="email" placeholder="Type Here">
+            <label for="message">Message:</label>
+            <textarea required name="message" id="contact-message" cols="30" rows="3" placeholder="Type Here"></textarea>
+            <input type="submit" name="send" id="send-btn" value="Send Message">
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+
+    <div id="footer-bg">
+        <footer>
+            <article>
+                <div>
+                    <img src="{{ url_for('static', filename='images/wind-energy-white.png') }}" alt="Clean Energy Logo" id="footer-logo">
+                <h6>CE</h6>
+                </div>
+                <h2>Start by making the switch to clean energy now!</h2>
+            </article>
+            <article class="large-screen-article">
+                <h4>Links:</h4>
+                <a href="{{ url_for('index')}}">Home</a>
+                <a href="{{ url_for('about')}}">About</a>
+                <a href="{{ url_for('services')}}">Services</a>
+                <a href="{{ url_for('contacts')}}">Contacts</a>
+            </article>
+            <article class="large-screen-article">
+                <h4>Services:</h4>
+                <a href="{{ url_for('services')}}">Wind</a>
+                <a href="{{ url_for('services')}}">Solar</a>
+                <a href="{{ url_for('services')}}">Geothermal</a>
+            </article>
+            <div id="small-screen-wrapper">
+                <article>
+                    <h4>Links:</h4>
+                    <a href="{{ url_for('index')}}">Home</a>
+                    <a href="{{ url_for('about')}}">About</a>
+                    <a href="{{ url_for('services')}}">Services</a>
+                    <a href="{{ url_for('contacts')}}">Contacts</a>
+                </article>
+                <article>
+                    <h4>Services:</h4>
+                    <a href="{{ url_for('services')}}">Wind</a>
+                    <a href="{{ url_for('services')}}">Solar</a>
+                    <a href="{{ url_for('services')}}">Geothermal</a>
+                </article>
+            </div>
+            <article>
+                <h4>Contacts:</h4>
+                <p><i class="gg-phone"></i>&nbsp;+354 551 8749</p>
+                <p><i class="gg-mail"></i>&nbsp;support@clean.energy</p>
+            </article>
+        </footer>
+    </div>
+</body>
+</html>
